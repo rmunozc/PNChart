@@ -25,6 +25,9 @@
 		0AF7A891182AA9F6003645C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF7A88F182AA9F6003645C4 /* InfoPlist.strings */; };
 		0AF7A893182AA9F6003645C4 /* PNChartDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7A892182AA9F6003645C4 /* PNChartDemoTests.m */; };
 		0AF7A8AF182AAEEF003645C4 /* PCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7A8AE182AAEEF003645C4 /* PCChartViewController.m */; };
+		2231E2181A92932E00CEB07D /* TRDChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2231E2171A92932E00CEB07D /* TRDChartLabel.m */; };
+		2231E21B1A929A2900CEB07D /* TRDBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2231E21A1A929A2900CEB07D /* TRDBarChart.m */; };
+		2231E21E1A929AD400CEB07D /* TRDBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2231E21D1A929AD400CEB07D /* TRDBar.m */; };
 		91177ED8198DFAC400017E27 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 91177EC9198DFAC400017E27 /* PNBar.m */; };
 		91177ED9198DFAC400017E27 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 91177EC9198DFAC400017E27 /* PNBar.m */; };
 		91177EDA198DFAC400017E27 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 91177ECB198DFAC400017E27 /* PNBarChart.m */; };
@@ -84,6 +87,13 @@
 		0AF7A892182AA9F6003645C4 /* PNChartDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNChartDemoTests.m; sourceTree = "<group>"; };
 		0AF7A8AD182AAEEF003645C4 /* PCChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCChartViewController.h; sourceTree = "<group>"; };
 		0AF7A8AE182AAEEF003645C4 /* PCChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartViewController.m; sourceTree = "<group>"; };
+		2231E2161A92932E00CEB07D /* TRDChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDChartLabel.h; sourceTree = "<group>"; };
+		2231E2171A92932E00CEB07D /* TRDChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDChartLabel.m; sourceTree = "<group>"; };
+		2231E2191A929A2900CEB07D /* TRDBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDBarChart.h; sourceTree = "<group>"; };
+		2231E21A1A929A2900CEB07D /* TRDBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDBarChart.m; sourceTree = "<group>"; };
+		2231E21C1A929AD400CEB07D /* TRDBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDBar.h; sourceTree = "<group>"; };
+		2231E21D1A929AD400CEB07D /* TRDBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDBar.m; sourceTree = "<group>"; };
+		2231E21F1A929B9400CEB07D /* TRDChartDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDChartDelegate.h; sourceTree = "<group>"; };
 		2980CA20C29DC029B2D0B926 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3BA6321352024B1FBA0158B0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		91177EC8198DFAC400017E27 /* PNBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBar.h; sourceTree = "<group>"; };
@@ -238,6 +248,13 @@
 		9FE15DE0190BB014004129F5 /* PNChart */ = {
 			isa = PBXGroup;
 			children = (
+				2231E21F1A929B9400CEB07D /* TRDChartDelegate.h */,
+				2231E21C1A929AD400CEB07D /* TRDBar.h */,
+				2231E21D1A929AD400CEB07D /* TRDBar.m */,
+				2231E2191A929A2900CEB07D /* TRDBarChart.h */,
+				2231E21A1A929A2900CEB07D /* TRDBarChart.m */,
+				2231E2161A92932E00CEB07D /* TRDChartLabel.h */,
+				2231E2171A92932E00CEB07D /* TRDChartLabel.m */,
 				0A2922821A423FB300A42BC4 /* PNScatterChart.h */,
 				0A2922831A423FB300A42BC4 /* PNScatterChart.m */,
 				0A2922841A423FB300A42BC4 /* PNScatterChartData.h */,
@@ -404,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91177EDE198DFAC400017E27 /* PNLineChart.m in Sources */,
+				2231E21B1A929A2900CEB07D /* TRDBarChart.m in Sources */,
 				9FE15DF8190BB014004129F5 /* PNChartLabel.m in Sources */,
 				91177EDC198DFAC400017E27 /* PNCircleChart.m in Sources */,
 				9FE15DFA190BB014004129F5 /* PNColor.m in Sources */,
@@ -411,6 +429,8 @@
 				91177EE2198DFAC400017E27 /* PNLineChartDataItem.m in Sources */,
 				0AF7A8AF182AAEEF003645C4 /* PCChartViewController.m in Sources */,
 				0A29228A1A423FB300A42BC4 /* PNScatterChartDataItem.m in Sources */,
+				2231E2181A92932E00CEB07D /* TRDChartLabel.m in Sources */,
+				2231E21E1A929AD400CEB07D /* TRDBar.m in Sources */,
 				91177EDA198DFAC400017E27 /* PNBarChart.m in Sources */,
 				91177EE6198DFAC400017E27 /* PNPieChartDataItem.m in Sources */,
 				9FA23B10184A5944002DBBA4 /* PCChartsTableViewController.m in Sources */,

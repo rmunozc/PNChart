@@ -159,6 +159,34 @@
         self.changeValueButton.hidden = YES;
         [self.view addSubview:self.scatterChart];
     }
+    else if ([self.title isEqualToString:@"TRD Chart"])
+    {
+        self.titleLabel.text = @"TRD Chart";
+
+        self.trdBarChart = [[TRDBarChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 200.0)];
+        self.trdBarChart.backgroundColor = [UIColor clearColor];
+        self.trdBarChart.yLabelFormatter = ^(CGFloat yValue){
+            CGFloat yValueParsed = yValue;
+            NSString * labelText = [NSString stringWithFormat:@"%1.f",yValueParsed];
+            return labelText;
+        };
+        self.trdBarChart.labelMarginTop = 5.0;
+        [self.trdBarChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4"]];
+        //self.trdBarChart.rotateForXAxisText = true ;
+        [self.trdBarChart setYValues:@[@1,@24,@12,@18]];
+        [self.trdBarChart setStrokeColors:@[PNGreen,PNGreen,PNRed,PNGreen]];
+        [self.trdBarChart setBarBackgroundColor:[UIColor clearColor]];
+        // Adding gradient
+        //self.trdBarChart.barColorGradientStart = [UIColor blueColor];
+        self.trdBarChart.alternativeXLabels = @[@"1",@"24",@"12",@"18"];
+
+        [self.trdBarChart setAlternativeBackgroundColor:PNGreen];
+        [self.trdBarChart strokeChart];
+
+        self.trdBarChart.delegate = self;
+
+        [self.view addSubview:self.trdBarChart];
+    }
 }
 
 
@@ -214,7 +242,13 @@
     {
         // will be code soon.
     }
-    
+    else if ([self.title isEqualToString:@"TRD Chart"])
+    {
+        // will be code soon.
+
+        
+    }
+
 }
 
 - (void)userClickedOnBarAtIndex:(NSInteger)barIndex
