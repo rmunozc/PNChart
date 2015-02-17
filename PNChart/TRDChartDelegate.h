@@ -10,11 +10,14 @@
 
 @protocol TRDChartDelegate <NSObject>
 
+
+@optional
 /**
  * When user click on the chart line
  *
  */
 - (void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex;
+
 
 /**
  * When user click on the chart line key point

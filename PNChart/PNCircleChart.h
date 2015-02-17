@@ -18,6 +18,8 @@ typedef NS_ENUM (NSUInteger, PNChartFormatType) {
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 
+@protocol PNCirleChartDelegate;
+
 @interface PNCircleChart : UIView
 
 - (void)strokeChart;
@@ -69,4 +71,10 @@ displayCountingLabel:(BOOL)displayCountingLabel
 
 @property (nonatomic) BOOL displayCountingLabel;
 
+@property (nonatomic) id<PNCirleChartDelegate> labelDelegate;
+
+@end
+
+@protocol PNCirleChartDelegate <NSObject>
+- (void) updateCountFrom:(float)startValue to:(float)endValue withDuration:(NSTimeInterval)duration;
 @end
